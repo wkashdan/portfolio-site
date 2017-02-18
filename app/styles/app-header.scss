@@ -1,0 +1,50 @@
+.app-header {
+  background-color: $indigo;
+  display: flex;
+
+  &__title {
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    color: $xlightIndigo;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    margin: 5px;
+    padding: 8px;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+  }
+
+  &__link {
+    font-weight: 100;
+    padding: 10px;
+    background-color: $lightIndigo;
+    margin: 5px;
+    color: $indigo;
+    text-decoration: none;
+    transition: background-color 200ms, color 200ms;
+  }
+
+  @media(max-width: 800px) {
+    &__title {
+      font-size: 12px;
+    }
+
+    &__link {
+      font-size: 10px;
+    }
+  }
+
+
+
+  &__link:hover {
+    background-color: $indigo;
+    color: white;
+  }
+
+}
