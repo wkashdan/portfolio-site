@@ -3,20 +3,21 @@
   display: flex;
 
   &__title {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     text-transform: uppercase;
     color: $xlightIndigo;
     font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 0.15em;
+    font-size: 18px;
+    letter-spacing: 0.2em;
     margin: 5px;
     padding: 8px;
     text-decoration: none;
+    transition: font-size 200ms;
   }
 
   &__nav {
     display: flex;
-    flex: 0 1 auto;
+    flex: 1 0 auto;
     align-items: center;
   }
 
@@ -27,7 +28,9 @@
     margin: 5px;
     color: $indigo;
     text-decoration: none;
-    transition: background-color 200ms, color 200ms;
+    transition: background-color 200ms;
+    font-size: 14px;
+    border-radius: 3px;
   }
 
   @media(max-width: 800px) {
@@ -36,15 +39,22 @@
     }
 
     &__link {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
 
-
-
   &__link:hover {
-    background-color: $indigo;
-    color: white;
+    background-color: white;
   }
+}
 
+@media(max-width: 600px) {
+  .app-header {
+    display: block;
+    
+    &__link {
+      display: block;
+      width: 100%;
+    }
+  }
 }
