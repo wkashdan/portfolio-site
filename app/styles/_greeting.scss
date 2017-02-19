@@ -1,0 +1,25 @@
+.greeting {
+  text-align: center;
+  margin: 40px;
+  &__title {
+    font-weight: 100;
+    font-size: 40px;
+    letter-spacing: .1em;
+  }
+
+  &__cursor {
+    display: inline;
+    padding-left: 10px;
+    font-weight: 400;
+  }
+
+  &__cursor--blink {
+    animation: blink 1200ms steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+}
